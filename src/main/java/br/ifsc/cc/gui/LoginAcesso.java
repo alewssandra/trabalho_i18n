@@ -85,15 +85,6 @@ public class LoginAcesso extends javax.swing.JDialog {
         this.jLabel2.setText(traducao.getString("access_password"));
         this.jButtonEntrar.setText(traducao.getString("access_button"));
         
-        //mudando para o português
-        this.jLabel1.setText(traducao.getString("acesso_usuario"));
-        this.jLabel2.setText(traducao.getString("acesso_senha"));
-        this.jButtonEntrar.setText(traducao.getString("botao"));
-        
-        //mudando para o espanhol
-        this.jLabel1.setText(traducao.getString("usuario"));
-        this.jLabel2.setText(traducao.getString("clave"));
-        this.jButtonEntrar.setText(traducao.getString("botao"));
     }
     
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
