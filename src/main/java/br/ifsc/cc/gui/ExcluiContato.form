@@ -37,7 +37,7 @@
                       <Component id="jButtonExclui" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="124" max="32767" attributes="0"/>
+              <EmptySpace pref="120" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -62,7 +62,7 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="jButtonVolta">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Volta"/>
+        <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonVoltaActionPerformed"/>

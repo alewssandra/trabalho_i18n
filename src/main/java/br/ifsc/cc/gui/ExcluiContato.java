@@ -1,9 +1,8 @@
-
 package br.ifsc.cc.gui;
 
 import br.ifsc.cc.modelo.Contato;
 import java.util.ArrayList;
-
+import java.util.ResourceBundle;
 
 public class ExcluiContato extends javax.swing.JDialog {
 
@@ -12,14 +11,7 @@ public class ExcluiContato extends javax.swing.JDialog {
     public void setListaContato(ArrayList<Contato> listaContatos) {
         this.listaContatos = listaContatos;
     }
-    
-    
-    public ExcluiContato(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
-        initComponents();
-    }
 
-  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -31,7 +23,7 @@ public class ExcluiContato extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jButtonVolta.setText("Volta");
+        jButtonVolta.setText("Voltar");
         jButtonVolta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonVoltaActionPerformed(evt);
@@ -62,7 +54,7 @@ public class ExcluiContato extends javax.swing.JDialog {
                         .addComponent(jButtonVolta)
                         .addGap(66, 66, 66)
                         .addComponent(jButtonExclui)))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,6 +72,19 @@ public class ExcluiContato extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+  public ResourceBundle traducao;
+
+    public ExcluiContato(java.awt.Frame parent, boolean modal, ResourceBundle traducoes) {
+        super(parent, modal);
+        initComponents();
+        this.traducao = traducoes;
+
+        //mudando para outro idioma
+        this.jLabel1.setText(traducao.getString("access_which_contact"));
+        this.jButtonVolta.setText(traducao.getString("access_return"));
+        this.jButtonExclui.setText(traducao.getString("access_delete"));
+
+    }
 
     private void jButtonVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltaActionPerformed
         this.dispose();
@@ -88,9 +93,9 @@ public class ExcluiContato extends javax.swing.JDialog {
     private void jButtonExcluiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluiActionPerformed
         String numTxt = jTextFieldNumero.getText();
         int num = Integer.parseInt(numTxt);
-        
-        this.listaContatos.remove( num );
-        
+
+        this.listaContatos.remove(num);
+
         this.dispose();
     }//GEN-LAST:event_jButtonExcluiActionPerformed
 

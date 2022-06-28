@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package br.ifsc.cc.gui;
 
 import java.io.IOException;
@@ -16,27 +12,26 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Aluno
+ * @author Alessandra e Carla
  */
 public class Principal {
+
     public static void main(String[] args) {
         ResourceBundle traducoes = null;
-//      LoginAcesso login = new LoginAcesso(new javax.swing.JFrame(), true, traducoes);
-        
+
         String idioma;
         String pais;
- 
-          if(args.length != 2){
-            idioma = "pt";
-            pais = "BR";
-        } else { 
-            idioma = args[0]; //pt ou en
-            pais = args[1]; //BR ou US
+
+        if (args.length != 2) {
+            idioma = "es";
+            pais = "AR";
+        } else {
+            idioma = args[0]; //pt ou en ou es
+            pais = args[1]; //BR ou US ou AR
         }
-        
+
         Locale localCorrente;
-      
-        
+
         //para desenvolvimento local
         localCorrente = new Locale(idioma, pais);
         traducoes = ResourceBundle.getBundle("MessagesBundle", localCorrente);
@@ -51,8 +46,9 @@ public class Principal {
 //        } catch (IOException ex) {
 //            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
 //        }
-        LoginAcesso logintela = new LoginAcesso(new javax.swing.JFrame(), true, traducoes );
+        LoginAcesso logintela = new LoginAcesso(new javax.swing.JFrame(), true, traducoes);
         logintela.setVisible(true);
+
     }
-        
+
 }

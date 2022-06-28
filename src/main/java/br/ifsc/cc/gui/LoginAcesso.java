@@ -1,11 +1,9 @@
-
 package br.ifsc.cc.gui;
 
 import java.util.ResourceBundle;
 
-
 public class LoginAcesso extends javax.swing.JDialog {
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -74,49 +72,29 @@ public class LoginAcesso extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     public ResourceBundle traducao;
-    
+
     public LoginAcesso(java.awt.Frame parent, boolean modal, ResourceBundle traducoes) {
         super(parent, modal);
         initComponents();
         this.traducao = traducoes;
-        
-        //mudando para o inglês
+
+        //mudando a linguagem
         this.jLabel1.setText(traducao.getString("access_user"));
         this.jLabel2.setText(traducao.getString("access_password"));
         this.jButtonEntrar.setText(traducao.getString("access_button"));
-        
+
     }
-    
+
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
         String nomeUsuario = jTextFieldUsuario.getText();
-        String senhaUsuario = String.valueOf( jPasswordFieldSenha.getPassword() );
-        
-        if ( nomeUsuario.equals("teste") && senhaUsuario.equals("teste") ) {
+        String senhaUsuario = String.valueOf(jPasswordFieldSenha.getPassword());
+
+        if (nomeUsuario.equals("teste") && senhaUsuario.equals("teste")) {
             this.dispose();
-            JanelaPrincipal janelaPrincipal = new JanelaPrincipal();
+            JanelaPrincipal janelaPrincipal = new JanelaPrincipal(new javax.swing.JFrame(), true, this.traducao);
             janelaPrincipal.setVisible(true);
         }
     }//GEN-LAST:event_jButtonEntrarActionPerformed
-    
-
-    
-   
-//    public static void main(String args[]) {
-//        
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                ResourceBundle traducoes = null;
-//                LoginAcesso dialog = new LoginAcesso(new javax.swing.JFrame(), true, traducoes );
-//                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-//                    @Override
-//                    public void windowClosing(java.awt.event.WindowEvent e) {
-//                        System.exit(0);
-//                    }
-//                });
-//                dialog.setVisible(true);
-//            }
-//        });
-//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonEntrar;
